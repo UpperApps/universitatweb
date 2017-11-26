@@ -1,0 +1,18 @@
+:host {
+    display: flex;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-width: 640px;
+  }
+  
+  .mat-table {
+    overflow: auto;
+    max-height: 720px;
+  }
+
+  .mat-header-row,  .mat-row{
+    min-width: 1000px;
+  }

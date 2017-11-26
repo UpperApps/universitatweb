@@ -6,7 +6,7 @@ import { Pesquisador } from 'app/model/pesquisador';
 @Injectable()
 export class PesquisadorService {
 
-url: string = 'http://localhost:4200/data/pesquisadores.json/';
+url: string = 'http://127.0.0.1:8887/pesquisadores.json/';
 
   constructor(private http: Http) {}
 

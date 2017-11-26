@@ -1,6 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { PesquisadorService } from 'app/service/pesquisador.service';
-import { Pesquisador } from 'app/model/pesquisador';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
+import {
+  PesquisadorService
+} from 'app/service/pesquisador.service';
+import {
+  Pesquisador
+} from 'app/model/pesquisador';
+import {
+  MatPaginator,
+  MatTableDataSource
+} from '@angular/material';
 
 @Component({
   selector: 'app-pesquisadores',
@@ -12,10 +23,12 @@ import { Pesquisador } from 'app/model/pesquisador';
 export class PesquisadoresComponent implements OnInit {
 
   pesquisadores: Pesquisador[];
+  displayedColumns = ['id', 'nome', 'cpf'];
+  dataSource = new MatTableDataSource < Pesquisador > ();
 
   constructor(
     private pesquisadorService: PesquisadorService
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.pesquisadorService.listar()
@@ -23,6 +36,11 @@ export class PesquisadoresComponent implements OnInit {
         pesquisadores => this.pesquisadores = pesquisadores,
         erro => console.log(erro)
       );
+  }
+
+  // tslint:disable-next-line:use-life-cycle-interface
+  ngDoCheck() {
+    this.dataSource.data = this.pesquisadores;
   }
 
 }
