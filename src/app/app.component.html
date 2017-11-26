@@ -1,3 +1,31 @@
-<h1>
-  {{title}}
-</h1>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <div class="titulo">
+      <span style="font-size: 2em">Universitat <mat-icon class="icon">school</mat-icon></span>
+      <span style="font-size: 0.75em">Centro de Pesquisas Universais</span>
+    </div>
+    <span class="spacer"></span>
+    <img *ngIf="clima.data.icon" src="/assets/realistic/45px/{{ clima.data.icon }}.png" alt="{{ clima.data.condition}}">
+    <span style="margin: 0 10px 0 10px">{{ clima.name }} {{ clima.data.temperature}}º - {{ clima.data.condition }}</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container class="container">
+  <mat-sidenav #sidenav mode="side" opened="true" class="sidenav">
+    <mat-list>
+      <mat-list-item>
+        <a href=""><span>Home</span></a>
+      </mat-list-item>
+      <mat-list-item>
+        <a href="pesquisadores"><span>Pesquisadores</span></a>
+      </mat-list-item>
+      <mat-list-item>
+        <a href="projetos-pesquisa"><span>Projetos de Pesquisa</span></a>
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+
+  <div class="sidenav-content">
+    <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>

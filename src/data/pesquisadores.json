@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "nome": "Rodrigo Melo",
+    "cpf": "22222222222"
+  },
+  {
+    "id": 2,
+    "nome": "Daiane Queiroz",
+    "cpf": "77777777777"
+  },
+  {
+    "id": 3,
+    "nome": "Leonardo Azevedo",
+    "cpf": "33333333333"
+  },
+  {
+    "id": 4,
+    "nome": "César Guimarães",
+    "cpf": "55555555555"
+  }
+]
