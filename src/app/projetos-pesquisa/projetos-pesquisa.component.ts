@@ -22,7 +22,7 @@ import {
 export class ProjetosPesquisaComponent implements OnInit {
 
   projetosPesquisa: ProjetoPesquisa[];
-  displayedColumns = ['id', 'titulo', 'tempo_previsto', 'data_inicio', 'data_fim', 'status'];
+  displayedColumns = ['id', 'titulo', 'tempo_previsto', 'data_inicio', 'data_conclusao', 'status'];
   dataSource = new MatTableDataSource < ProjetoPesquisa > ();
 
   constructor(private projetosPesquisaService: ProjetosPesquisaService) {}

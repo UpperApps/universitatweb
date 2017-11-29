@@ -6,7 +6,10 @@ import { ProjetoPesquisa } from 'app/model/projeto-pesquisa';
 @Injectable()
 export class ProjetosPesquisaService {
 
-  url: string = 'http://127.0.0.1:8887/projetos-pesquisa.json/';
+  // Mock resource
+  // url: string = 'http://127.0.0.1:8887/projetos-pesquisa.json/';
+
+  url: string = '/projetospesquisa';
 
   constructor(private http: Http) {}
 

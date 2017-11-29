@@ -6,7 +6,9 @@ import { Pesquisador } from 'app/model/pesquisador';
 @Injectable()
 export class PesquisadorService {
 
+// Mock resource
 // url: string = 'http://127.0.0.1:8887/pesquisadores.json/';
+
 url: string = '/pesquisadores';
 
   constructor(private http: Http) {}
